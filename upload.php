@@ -53,13 +53,13 @@ for ($i = 0; $i < count($dirArray); $i++)  {
     $extension = end($temp);
     if (in_array($extension, $allowedExtensions))   {
         getThumbnail($dirArray[$i]);
-        echo "<p align=center><img src=$rname"."/thumbnails"."/$dirArray[$i]"."/></p>";
+        echo "<p align=center><img src=$rname"."/thumbnails/"."$dirArray[$i]"."/></p>";
     }
     else    {
         echo "<p align=center>（无预览）</p>";
     }
     echo "<p align=center>$dirArray[$i]</p>";
-//    echo "<button id='delButton'>点击我</button><script src='script.js'></script>";
+    echo "<p align=center><a href='delFile.php?file=$dirArray[$i]'>删除</a></p>";
     echo "<HR>";
 }
 ?>
